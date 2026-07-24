@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const fs=require('fs'),cp=require('child_process'),p='.claude/polymai-report.cjs';if(fs.existsSync(p)){cp.spawnSync(process.execPath,[p],{stdio:'inherit'});}else{console.error('Polymai report hook missing: '+p);}process.exit(0);\""
+          }
+        ]
+      }
+    ]
+  }
+}

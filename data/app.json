@@ -1,0 +1,32 @@
+{
+  "id": "app717",
+  "name": "TheMeshVault",
+  "tagline": "Streamed, encrypted file storage across verified browser devices.",
+  "schema": "app717_meshvault",
+  "accessModel": "anonymous_first",
+  "capabilities": {
+    "supabase": true,
+    "auth": true,
+    "anonymousAuth": true,
+    "realtime": true,
+    "edgeFunctions": true,
+    "webrtc": true,
+    "turn": true,
+    "supabaseStorage": false,
+    "pwa": true,
+    "webPush": true,
+    "backgroundSync": true
+  },
+  "limits": {
+    "maxUploadBytes": 100000000,
+    "defaultContributionBytes": 1073741824,
+    "maxContributionBytes": 10737418240,
+    "segmentBytes": 8388608,
+    "minimumCompressionSavings": 0.05,
+    "transportPacketBytes": 32768,
+    "storageFormatVersion": 2,
+    "maximumShardsPerSegment": 16,
+    "defaultSixteenNodeProfile": "12+4",
+    "highResilienceSixteenNodeProfile": "10+6"
+  }
+}

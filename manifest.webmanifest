@@ -1,0 +1,13 @@
+{
+  "name": "TheMeshVault",
+  "short_name": "MeshVault",
+  "description": "Private, resilient storage across verified devices.",
+  "start_url": "./#/dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#02060b",
+  "theme_color": "#02060b",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

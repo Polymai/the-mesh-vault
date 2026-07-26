@@ -1,0 +1,11 @@
+:root {
+  --ink-950:#050c16; --ink-900:#07111f; --ink-850:#0a1726; --ink-800:#0e1e2f; --ink-700:#183248;
+  --paper:#f4f8f9; --surface:#ffffff; --surface-soft:#edf4f5; --line:#d8e4e7; --text:#112533; --muted:#617582;
+  --cyan:#35d9e6; --cyan-dark:#078b9a; --teal:#44e1bd; --teal-dark:#12866e; --amber:#f2b84b; --danger:#d95562;
+  --font-display:"Manrope","Segoe UI Variable Display","Aptos Display",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-body:"Manrope","Segoe UI Variable Text","Aptos",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-brand:"Chakra Petch","Segoe UI Variable Display",ui-sans-serif,system-ui,sans-serif;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px; --radius-xl:36px;
+  --shadow-sm:0 8px 24px rgba(5,20,31,.07); --shadow:0 24px 60px rgba(4,17,28,.13);
+  --sidebar:264px; --content:1240px; --ease:180ms cubic-bezier(.2,.75,.25,1);
+}

@@ -1,0 +1,177 @@
+.mesh-connections-stage { position: relative; }
+
+.mesh-connections {
+  position: relative;
+  min-height: 560px;
+  height: max(560px, calc(100svh - 170px));
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 22% 16% at 50% 48%, transparent 96%, rgba(12,158,170,.075) 98%, transparent 100%),
+    radial-gradient(ellipse 40% 29% at 50% 48%, transparent 97%, rgba(12,158,170,.06) 98.5%, transparent 100%),
+    radial-gradient(ellipse 62% 45% at 50% 48%, transparent 97.5%, rgba(12,158,170,.045) 99%, transparent 100%),
+    radial-gradient(circle at 50% 42%, rgba(249,253,253,.98), rgba(220,237,240,.98)),
+    #e5f1f3;
+}
+
+.mesh-connections__canvas {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+
+.mesh-connections__transfer-layer {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.mesh-transfer-particle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border: 1px solid rgba(255,255,255,.92);
+  border-radius: 50%;
+  background: #087f8d;
+  box-shadow:
+    0 0 0 3px rgba(53,217,230,.2),
+    0 0 15px rgba(8,127,141,.72);
+  will-change: transform, opacity;
+}
+
+.mesh-connections__canvas:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: -3px;
+}
+
+.mesh-connections__controls {
+  position: absolute;
+  z-index: 3;
+  top: .7rem;
+  left: .7rem;
+  display: flex;
+  gap: .25rem;
+  padding: .2rem;
+  border: 1px solid rgba(82,126,137,.22);
+  border-radius: 10px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 8px 20px rgba(22,55,66,.1);
+  backdrop-filter: blur(10px);
+}
+
+.mesh-connections__controls button {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  place-items: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 .45rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+}
+
+.mesh-connections__controls button span {
+  font-size: .58rem;
+  font-weight: 750;
+}
+
+.mesh-connections__controls button:hover,
+.mesh-connections__controls button:focus-visible {
+  background: #e1f1f3;
+  color: var(--cyan-dark);
+}
+
+.mesh-connections__controls svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mesh-connections__mode {
+  position: absolute;
+  z-index: 2;
+  top: .78rem;
+  left: 5.2rem;
+  display: flex;
+  align-items: baseline;
+  gap: .55rem;
+  max-width: min(55%, 520px);
+  pointer-events: none;
+}
+
+.mesh-connections__mode strong {
+  color: var(--text);
+  font-size: .68rem;
+}
+
+.mesh-connections__mode span {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: .58rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mesh-connections__legend {
+  position: absolute;
+  z-index: 2;
+  left: 1rem;
+  bottom: .75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 1rem;
+  color: #55717b;
+  font-size: .6rem;
+  pointer-events: none;
+}
+
+.mesh-connections__legend span { display: inline-flex; align-items: center; gap: .4rem; }
+.mesh-connections__legend i { width: 8px; height: 8px; border: 1.5px solid #9585ff; transform: rotate(45deg); }
+.mesh-connections__legend i.has-files { border-radius: 50%; border-color: #e1a91d; transform: none; }
+.mesh-connections__legend i.is-direct { width: 13px; height: 0; border: 0; border-top: 2px solid #159fab; transform: none; }
+
+.mesh-connections__loading {
+  position: absolute;
+  z-index: 4;
+  inset: 50% auto auto 50%;
+  padding: .55rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 30px rgba(22,55,66,.12);
+}
+
+.mesh-connections__loading[hidden] { display: none; }
+.mesh-connections.is-error .mesh-connections__loading { color: var(--danger); }
+.mesh-connections--empty { display: grid; place-items: center; color: var(--muted); }
+
+.mesh-layout.is-fullscreen .mesh-connections {
+  height: calc(100dvh - 2rem);
+  min-height: 420px;
+}
+
+@media (max-width: 650px) {
+  .mesh-connections {
+    min-height: 500px;
+    height: clamp(500px, calc(100svh - 235px), 660px);
+  }
+  .mesh-connections__controls { top: .5rem; left: .5rem; }
+  .mesh-connections__mode { top: 3.2rem; left: .75rem; max-width: calc(100% - 1.5rem); }
+  .mesh-connections__mode span { display: none; }
+  .mesh-connections__legend { left: .75rem; bottom: .6rem; }
+}

@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "bridgeApiVersion": 2,
+  "purpose": "Keep TheMeshVault available as a user-controlled encrypted storage and coordination node while the Android screen is off.",
+  "notificationTitle": "TheMeshVault node is running",
+  "notificationText": "Encrypted shards and mesh coordination remain available.",
+  "workerSource": "native/android/PolymaiAppBackgroundWorker.java",
+  "workerSources": [
+    "native/android/PolymaiAppMeshCrypto.java",
+    "native/android/PolymaiAppMeshStore.java",
+    "native/android/PolymaiAppMeshClient.java",
+    "native/android/PolymaiAppMeshPeer.java"
+  ],
+  "gradleDependencies": [
+    "com.squareup.okhttp3:okhttp:4.12.0",
+    "io.github.webrtc-sdk:android:144.7559.09",
+    "net.i2p.crypto:eddsa:0.3.0"
+  ],
+  "androidPermissions": [
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.RECEIVE_BOOT_COMPLETED"
+  ],
+  "trustedOrigins": [
+    "https://themeshvault.com"
+  ],
+  "restartOnBoot": true
+}

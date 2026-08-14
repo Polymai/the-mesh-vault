@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TheMeshVault — Private, resilient browser storage</title>
+  <meta name="description" content="Encrypt files locally and keep them recoverable across a resilient browser-powered device mesh.">
+  <meta name="theme-color" content="#07111f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="TheMeshVault">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta property="og:title" content="TheMeshVault — Private, resilient browser storage">
+  <meta property="og:description" content="Files up to 100 MB are encrypted locally and placed as recovery shards across participating devices, with byte-exact verification when enough shards are reachable.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+  <link rel="stylesheet" href="css/mesh-view.css">
+  <link rel="stylesheet" href="css/data-flow.css">
+  <link rel="stylesheet" href="css/mesh-connections.css">
+  <link rel="stylesheet" href="css/landing-refinement.css">
+  <link rel="stylesheet" href="css/public-documents.css">
+  <link rel="stylesheet" href="css/security-architecture.css">
+  <link rel="stylesheet" href="css/security-process-diagrams.css">
+  <link rel="stylesheet" href="css/night-node.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"TheMeshVault","applicationCategory":"SecurityApplication","operatingSystem":"Modern web browser","description":"A browser application that streams files through compression, authenticated encryption, erasure coding, and verified device placement."}</script>
+</head>
+<body>
+  <div id="app">
+    <main class="boot-screen" role="status" aria-busy="true">
+      <span class="brand-wordmark" aria-label="TheMeshVault"><span class="brand-glyph" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path class="brand-glyph__frame" d="M16 2.8 27.4 9.4v13.2L16 29.2 4.6 22.6V9.4Z"/><path class="brand-glyph__mesh" d="m4.9 9.6 11.1 6.5 11.1-6.5M16 16.1v12.6"/><circle class="brand-glyph__node" cx="16" cy="16.1" r="2.15"/></svg></span><span class="brand-lockup"><span class="brand-the">The</span><span class="brand-name">MeshVault</span></span></span>
+      <div class="loader-ring"></div>
+      <h1>Opening private storage</h1>
+      <p>Preparing local encryption and your resilient device mesh.</p>
+    </main>
+  </div>
+  <noscript>TheMeshVault needs JavaScript to segment, encrypt, place, and recover files in your browser.</noscript>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.js" integrity="sha384-sLWJsCmP+Z4Qn+HgF7Hi64Djta4fZMu0fcgi3uUL3GFV/ubx2G86LPOuMf7+ZIyX" crossorigin="anonymous"></script>
+  <script src="js/vendor/qrcode.min.js"></script>
+  <script src="js/vendor/nacl-fast.min.js"></script>
+  <script src="data/supabaseConfig.js"></script>
+  <script src="data/backboneConfig.js"></script>
+  <script src="data/runtime-config.js"></script>
+  <script type="module" src="js/vendor/three-global.js"></script>
+  <script src="js/vendor/globe.gl.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

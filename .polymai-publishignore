@@ -1,0 +1,17 @@
+# Polymai GitHub Pages publishes the browser runtime, not workspace evidence or native source.
+.claude/
+mobile/
+native/
+project/
+scripts/
+test-artifacts/
+
+# Local governance, verification and engineering documents.
+POLYMAI_*
+*.md
+*.sha256
+ai-manifest.json
+
+# Superseded or deliberately unused public assets.
+downloads/themeshvault-backbone-host-v3.2.0.zip
+assets/security-key-flow.png

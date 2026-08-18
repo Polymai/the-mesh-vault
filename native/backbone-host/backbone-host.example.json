@@ -1,0 +1,20 @@
+{
+  "protocolVersion": 3,
+  "physicalHostId": "replace-with-one-stable-host-id",
+  "label": "Home backbone",
+  "listen": { "host": "127.0.0.1", "port": 3717 },
+  "publicUrl": "",
+  "tls": { "certificatePath": "", "privateKeyPath": "" },
+  "supabase": {
+    "url": "",
+    "publishableKey": "",
+    "heartbeatMs": 600000
+  },
+  "reserveBytesPerPool": 1073741824,
+  "storagePools": [
+    { "id": "primary", "path": "./data", "physicalDeviceId": "auto" }
+  ],
+  "instances": [
+    { "id": "018f51b6-c9a4-7d2a-8b4e-c459f0d621a1", "label": "Backbone 1", "poolId": "primary", "quotaBytes": 107374182400 }
+  ]
+}
